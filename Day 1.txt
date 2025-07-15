@@ -1,0 +1,36 @@
+DSA
+day 1
+
+based on structure of the code
+--------------------------------
+procedure - c,c++, java, python
+functional - python
+object-oriented - java, python, c++
+
+
+static  : int a = 10 ;  a = "Rinsha" // shows error
+dynamic : a = 10  a = "Rinsha" // not produce any error
+
+
+memory management
+
+2 memories - stack and heap
+
+a = 10 // here a - reference variable, 10 - object
+
+reference variable stored in the stack and object is stored in the heap
+ref variable points to the object : a -> 10
+
+more than one reference variable can points to same object :
+a = [10, 11, 13, 14]
+b = a
+c = a 
+if i changed a[1] = 99
+
+then all b[1], c[1] changes to 99 , because they are points to same object.
+
+dynamic : a = 10  a = "Rinsha" // not produce any error. here is why?
+
+in the beginning a was pointed to object 10, later on it points to another object "Rinsha". in dynamic programming the type only assigned in the run time.
+
+---------------------------------------------------------END--------------------------------------------------------
