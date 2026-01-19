@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.List;
 
 public class FindErrorNums {
     public static  void main(String[] args) {
