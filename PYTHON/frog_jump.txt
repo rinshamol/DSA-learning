@@ -1,0 +1,31 @@
+from collections import deque
+
+def verticalTraversal(root):
+    if not root:
+        return []
+
+    nodes = []  # (x, y, value)
+    q = deque([(root, 0, 0)])
+
+    while q:
+        node, x, y = q.popleft()
+        nodes.append((x, y, node.val))
+
+        if node.left:
+            q.append((node.left, x - 1, y + 1))
+        if node.right:
+            q.append((node.right, x + 1, y + 1))
+
+    # Sort by column, then row, then value
+    nodes.sort()
+
+    res = []
+    prev_x = float('-inf')
+
+    for x, y, val in nodes:
+        if x != prev_x:
+            res.append([])
+            prev_x = x
+        res[-1].append(val)
+
+    return res
