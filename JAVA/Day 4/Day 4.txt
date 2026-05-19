@@ -1,0 +1,83 @@
+DSA
+DAY 4
+
+- every .java file is a class file
+- the file name and the class name should be same and the first letter of the class name should be capital
+- main function where your program start(entry-point)
+
+- compiling : javac Main.java
+- run : java Main
+- static method in class means : we have to run that method without creating object of the class
+
+- main method should be static, because it's the entry point of the class.
+
+public static void main(String[] args){}
+
+String[] args- command-line argument 
+array of string
+
+javac -d .. day3/Main.java
+if you want to separate .java file and .class file, compile with this command. it will save the .class file outside the day3 folder.
+
+how the computer know the javac?
+because it is mentioned or added in the path variable(environmental variable setup)
+
+java.lang package contain 
+ System class which contain functions to perform input, output and debug operations
+ out is a PrintStream variable which contain println - command-line input
+ System.out (standard output stream)
+ 
+ Scanner : Used to take input
+ Scanner input = new Scanner(System.in)
+ System.in : input from keyboard
+
+primitive datatype:
+ datatype that cannot be divide or decompose into another datatype
+ int, char, float, double, long, boolean
+ String is non-primitive because "Rinsha" it can be divided into characters 'R','i',...
+ by default decimal values are double, make it float by adding 'f' in the end 345.56768888 -> 234.56f   // floating point error : values are not accurate in float, because it round off
+ like wise by default non-decimal values are integers to store long values make it as long by adding 'L' in the end 456567667687688L
+
+class name start with Capital letter they are classes for datatype they are Wrapper class
+eg: String, Integer 
+
+input sc.next()     // only take single word
+      sc.nextLine()  // take entire line
+
+literal and identifier
+A literal is a fixed value directly written in the code.
+int a = 10  // here 10 is literal, and a is identifier
+
+casting and type conversion
+---------------------------
+1.type should be compatible -> int is compatible to float, but not string
+float > int
+ so can be take input as integer and convert automatically into float
+
+float num = input.nextInt() // automatic type conversion occure
+int num = input.nextFloat() // error 
+
+but float -> int can be perform explicitly that is called typecasting.
+ int num = (int)(64.23f);
+
+automatic type promotion in expression
+1byte = 256
+int a = 257
+byte b = (byte) (a)  // 1   
+
+Type promotion in expressions refers to how smaller data types (like byte, short, or char) are automatically converted to larger data types (like int or double) during operations in Java. This ensures calculations are performed without data loss or overflow.
+
+For example:
+byte a = 10;
+byte b = 20;
+int result = a + b; // `a` and `b` are promoted to `int` before addition.
+
+java follows Unicode.
+
+int a = 'A'
+
+'A' is a character literal and in Java, characters are internally stored as their Unicode values.
+The Unicode value of 'A' is 65, which is an int.
+When you assign 'A' to int a, Java automatically promotes the char to int (type promotion).
+
+  --------------------------------------------------------END-----------------------------------------------------
