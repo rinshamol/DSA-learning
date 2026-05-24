@@ -10,6 +10,7 @@ def dijkstra(graph, start):
                 dist[nr] = new_cost
                 heapq.heappush(pq, (new_cost, nr))
     return dist
+     
 graph = {
     0: [(1, 5), (2, 1)],
     1: [(0, 5), (3, 2)],
